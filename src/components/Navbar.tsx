@@ -1,5 +1,4 @@
 "use client";
-console.log("Theme check:", document.documentElement.className);
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
