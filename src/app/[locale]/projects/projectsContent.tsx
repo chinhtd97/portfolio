@@ -68,7 +68,7 @@ export default function ProjectsContent() {
       stack: t("project3.tech"),
       demo: `${baseUrl}/${currentLang}/about`,
       github: {
-        frontend: "https://github.com/Litch9x/portfolio",
+        frontend: "https://github.com/chinhtd97/portfolio.git",
       },
       description: [
         t("project3.description1"),

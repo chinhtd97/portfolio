@@ -30,17 +30,17 @@ type ContactItem = {
 const socialLinks = [
   {
     icon: <FaFacebookF className="text-blue-600" />,
-    url: "https://facebook.com/",
+    url: "https://www.facebook.com/nicknd93/",
     label: "Facebook",
   },
   {
     icon: <SiZalo className="text-blue-400" />,
-    url: "https://zalo.me/",
+    url: "https://zalo.me/0345938394",
     label: "Zalo",
   },
   {
     icon: <FaLine className="text-green-500" />,
-    url: "https://line.me/",
+    url: "https://line.me/ti/p/whNDrsAdNU",
     label: "Line",
   },
   {

@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Right: Social Icons */}
         <div className="flex justify-center md:justify-end gap-4">
           <Link
-            href="https://facebook.com"
+            href="https://www.facebook.com/nicknd93/"
             target="_blank"
             aria-label="Facebook"
             className={iconStyle}
@@ -44,7 +44,7 @@ export default function Footer() {
             <FaFacebookF className="text-blue-500" size={18} />
           </Link>
           <Link
-            href="https://zalo.me"
+            href="https://zalo.me/0345938394"
             target="_blank"
             aria-label="Zalo"
             className={iconStyle}
@@ -52,7 +52,7 @@ export default function Footer() {
             <span className="text-blue-400 text-sm font-semibold">Zalo</span>
           </Link>
           <Link
-            href="https://line.me"
+            href="https://line.me/ti/p/whNDrsAdNU"
             target="_blank"
             aria-label="Line"
             className={iconStyle}
