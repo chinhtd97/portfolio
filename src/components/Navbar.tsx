@@ -19,15 +19,14 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
-  if (typeof window === "undefined") return null;
   const { theme } = useTheme();
   const router = useRouter();
   const pathname = usePathname();
- const currentLang = (pathname.split("/")[1] as Locale) || defaultLocale;
+  const currentLang = (pathname.split("/")[1] as Locale) || defaultLocale;
   const { t } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
- 
+
   const navLinks = [
     "about",
     "certifications",
@@ -38,7 +37,7 @@ export default function Navbar() {
   ];
 
   const handleChangeLang = async (lang: string) => {
-    if (!languages.includes(lang as any)) return;
+    if (!languages.includes(lang as Locale)) return;
     const newPath = pathname.replace(/^\/[a-z]{2}/, `/${lang}`);
     // Chuyển route trước
     router.push(newPath);
@@ -51,7 +50,7 @@ export default function Navbar() {
       i18next.changeLanguage(currentLang);
     }
   }, [currentLang]);
-
+  if (typeof window === "undefined") return null;
   return (
     <nav
       key={currentLang}
@@ -130,8 +129,13 @@ export default function Navbar() {
                   : "text-gray-800 hover:bg-gray-300 bg-gray-200"
               }`}
             >
-              <span className="text-xl"><img src={languageOptions.find((lng) => lng.code === currentLang)?.flag}/>
-                
+              <span className="text-xl">
+                <img
+                  src={
+                    languageOptions.find((lng) => lng.code === currentLang)
+                      ?.flag
+                  }
+                />
               </span>
               <ChevronDown className="w-4 h-4 ml-1" />
             </DropdownMenu.Button>
@@ -168,7 +172,9 @@ export default function Navbar() {
                           : "text-gray-800"
                       } w-full px-4 py-2 text-sm text-left flex gap-2 items-center`}
                     >
-                      <span className="text-xl"><img src={lng.flag}/></span>
+                      <span className="text-xl">
+                        <img src={lng.flag} />
+                      </span>
                       <span>{lng.label}</span>
                     </button>
                   )}
