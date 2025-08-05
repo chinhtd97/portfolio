@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { languages } from "@/i18n/settings";
+import { languages, Locale } from "@/i18n/settings";
 
 export function LanguageSwitcher() {
   const pathname = usePathname();
@@ -12,11 +12,10 @@ export function LanguageSwitcher() {
   return (
     <div className="flex gap-2">
       {languages.map((lng) => {
-        const newPath =
-          currentLang && languages.includes(currentLang as any)
-            ? pathname.replace(`/${currentLang}`, `/${lng}`)
-            : `/${lng}${pathname}`;
-
+        const isValidLang = languages.includes(currentLang as Locale);
+        const newPath = isValidLang
+          ? pathname.replace(`/${currentLang}`, `/${lng}`)
+          : `/${lng}${pathname}`;
         return (
           <Link
             key={lng}
