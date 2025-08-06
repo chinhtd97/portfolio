@@ -54,7 +54,7 @@ export default function Navbar() {
     <nav
       key={currentLang}
       className={`w-full shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-50 ${
-        theme === "dark" ? "bg-gray-900" : "bg-white"
+        theme === "dark" ? "bg-gray-900" : "bg-gray-100"
       }`}
     >
       <div className="flex justify-between items-center ">

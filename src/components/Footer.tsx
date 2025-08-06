@@ -9,8 +9,6 @@ import { useTheme } from "next-themes";
 export default function Footer() {
   //const { t } = useTranslation(undefined, { useSuspense: false });
   const { theme } = useTheme();
-  const iconStyle =
-    "w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-colors text-white";
 
   return (
     <footer
@@ -21,7 +19,7 @@ export default function Footer() {
       }`}
     >
       <div
-        className={` max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center   text-sm ${
+        className={` max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-sm ${
           theme === "dark" ? "text-gray-300" : "text-gray-700"
         }`}
       >
@@ -39,7 +37,11 @@ export default function Footer() {
             href="https://www.facebook.com/nicknd93/"
             target="_blank"
             aria-label="Facebook"
-            className={iconStyle}
+            className={` w-10 h-10 flex items-center justify-center rounded-full  transition-colors text-white  ${
+              theme === "dark"
+                ? "bg-gray-800 hover:bg-gray-700"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
           >
             <FaFacebookF className="text-blue-500" size={18} />
           </Link>
@@ -47,7 +49,11 @@ export default function Footer() {
             href="https://zalo.me/0345938394"
             target="_blank"
             aria-label="Zalo"
-            className={iconStyle}
+            className={` w-10 h-10 flex items-center justify-center rounded-full  transition-colors text-white  ${
+              theme === "dark"
+                ? "bg-gray-800 hover:bg-gray-700"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
           >
             <span className="text-blue-400 text-sm font-semibold">Zalo</span>
           </Link>
@@ -55,7 +61,11 @@ export default function Footer() {
             href="https://line.me/ti/p/whNDrsAdNU"
             target="_blank"
             aria-label="Line"
-            className={iconStyle}
+            className={` w-10 h-10 flex items-center justify-center rounded-full  transition-colors text-white  ${
+              theme === "dark"
+                ? "bg-gray-800 hover:bg-gray-700"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
           >
             <SiLine className="text-green-500" size={18} />
           </Link>
@@ -63,7 +73,11 @@ export default function Footer() {
             href="https://linkedin.com"
             target="_blank"
             aria-label="LinkedIn"
-            className={iconStyle}
+            className={` w-10 h-10 flex items-center justify-center rounded-full  transition-colors text-white  ${
+              theme === "dark"
+                ? "bg-gray-800 hover:bg-gray-700"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
           >
             <FaLinkedinIn className="text-blue-500" size={18} />
           </Link>
@@ -71,7 +85,11 @@ export default function Footer() {
             href="https://skype.com"
             target="_blank"
             aria-label="Skype"
-            className={iconStyle}
+            className={` w-10 h-10 flex items-center justify-center rounded-full  transition-colors text-white  ${
+              theme === "dark"
+                ? "bg-gray-800 hover:bg-gray-700"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
           >
             <FaSkype className="text-blue-400" size={18} />
           </Link>
