@@ -77,7 +77,7 @@ export default function CertificationsContent() {
                     <strong>{t("certifications.ja")}</strong> JLPT N2
                   </li>
                   <li>
-                    <strong>{t("certifications.en")}</strong> TOEIC 800
+                    <strong>{t("certifications.en")}</strong> TOEIC 500
                   </li>
                 </ul>
               </div>
